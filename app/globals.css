@@ -1,0 +1,136 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f3f8f4;
+  --bg-dark: #0b1520;
+  --surface: #ffffff;
+  --surface-dark: #132334;
+  --text: #1b2430;
+  --text-dark: #ebf0f6;
+  --primary: #1ea672;
+  --secondary: #1976d2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #ecfff4 0%, #eaf2ff 100%);
+  color: var(--text);
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 8px 26px rgba(14, 35, 65, 0.08);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.btn {
+  border: none;
+  border-radius: 9999px;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-secondary {
+  background: #e2ecff;
+  color: #15468a;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #d8e7ef;
+}
+
+.nav-inner {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  background: #eef4f7;
+  color: #2f4558;
+  font-size: 0.85rem;
+}
+
+input, textarea, select {
+  width: 100%;
+  border: 1px solid #d0dce7;
+  border-radius: 10px;
+  padding: 0.7rem;
+  margin-top: 0.35rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid #d8e7ef;
+  padding: 0.5rem 1rem calc(0.5rem + env(safe-area-inset-bottom));
+}
+
+.bottom-nav ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #244663;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.content-space {
+  padding-bottom: 5rem;
+}
