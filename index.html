@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hey Buddy Sports</title>
+    <meta name="description" content="Find and join nearby sports games quickly." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container row between center">
+        <h1>🏅 Hey Buddy</h1>
+        <button class="btn secondary" data-target="auth">Login</button>
+      </div>
+    </header>
+
+    <main class="container space-bottom">
+      <section id="home" class="card">
+        <h2>Find your next game in 3 clicks</h2>
+        <p>Open app → Find nearby room → Join game.</p>
+        <div class="row gap wrap">
+          <button class="btn" data-target="dashboard">Open Dashboard</button>
+          <button class="btn secondary" data-target="create">Create Room</button>
+        </div>
+      </section>
+
+      <section id="dashboard" class="card hidden">
+        <h2>Nearby Games</h2>
+        <div class="tags">
+          <span>Cricket</span><span>Football</span><span>Badminton</span>
+        </div>
+        <div class="tags">
+          <span>Today</span><span>Tomorrow</span><span>Weekend</span>
+        </div>
+        <div class="grid-2">
+          <article class="card mini">
+            <h3>Cricket</h3>
+            <p>Andheri Turf • Today 7:00 PM</p>
+            <p>Slots left: 3</p>
+            <button class="btn" data-target="room">Join</button>
+          </article>
+          <article class="card mini">
+            <h3>Football</h3>
+            <p>Bandra Ground • Sat 6:30 AM</p>
+            <p>Slots left: 5</p>
+            <button class="btn" data-target="room">Join</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="create" class="card hidden">
+        <h2>Create Room</h2>
+        <form class="grid-2" onsubmit="event.preventDefault(); alert('Room created (demo)');">
+          <label>Sport<select><option>Cricket</option><option>Football</option><option>Badminton</option></select></label>
+          <label>Players<input type="number" value="10" min="2" max="22" /></label>
+          <label>Date<input type="date" /></label>
+          <label>Time<input type="time" /></label>
+          <label class="full">Location<input placeholder="Search location" /></label>
+          <label class="full">Description<textarea rows="3" placeholder="Add details"></textarea></label>
+          <button class="btn full" type="submit">Create</button>
+        </form>
+      </section>
+
+      <section id="room" class="card hidden">
+        <h2>Room Details</h2>
+        <p>Andheri Turf • Cricket • Today 7:00 PM</p>
+        <div class="tags"><span>Slots left: 3</span><span>Distance: 3.2km</span></div>
+        <h3>Players</h3>
+        <ul>
+          <li>Aman (Intermediate)</li>
+          <li>Riya (Advanced)</li>
+        </ul>
+        <button class="btn">Join Room</button>
+      </section>
+
+      <section id="profile" class="card hidden">
+        <h2>Profile</h2>
+        <p>Manage sports preferences and game history.</p>
+        <div class="tags"><span>Rating: 4.7</span><span>Games: 24</span><span>Hosted: 7</span></div>
+      </section>
+
+      <section id="auth" class="card hidden">
+        <h2>Login</h2>
+        <form onsubmit="event.preventDefault(); alert('Logged in (demo)');">
+          <label>Email<input type="email" placeholder="you@example.com" required /></label>
+          <label>Password<input type="password" placeholder="••••••••" required /></label>
+          <button class="btn" type="submit">Continue</button>
+        </form>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button data-target="dashboard">Dashboard</button>
+      <button data-target="create">Create</button>
+      <button data-target="room">Room</button>
+      <button data-target="profile">Profile</button>
+    </nav>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,25 +1,17 @@
-# HeyBuddy Sports App (Frontend Scaffold)
+# HeyBuddy Sports App (Root Static Build)
 
-This repository contains a Next.js App Router frontend scaffold for a mobile-first sports room discovery platform.
+This project is now intentionally flattened to **root-level static files** so Vercel deployment is simple.
 
-## Run locally
+## Files at project root
+- `index.html`
+- `styles.css`
+- `app.js`
+- `vercel.json`
 
-```bash
-npm install
-npm run dev
-```
+## Deploy on Vercel
+1. Import this repository into Vercel.
+2. Framework preset: **Other** (or let Vercel auto-detect static output).
+3. Build command: **leave empty**.
+4. Output directory: **`.`** (project root).
 
-Then open `http://localhost:3000`.
-
-## Included modules
-- Auth pages (`/auth/login`, `/auth/signup`, `/auth/forgot-password`)
-- Dashboard (`/dashboard`)
-- Create room (`/rooms/create`)
-- Room detail (`/rooms/[id]`)
-- Profile (`/profile`)
-- Shared UI components and API/store scaffolding
-
-## Vercel deployment notes
-- Uses stable `next@14` + `react@18.2` pair for compatibility.
-- Requires Node.js `>=18.18.0` (set in `package.json` engines).
-- `tsconfig.json` includes `baseUrl` for alias path resolution on CI/build agents.
+No Node build step is required.
